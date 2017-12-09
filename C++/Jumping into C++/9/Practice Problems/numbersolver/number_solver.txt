@@ -1,6 +1,6 @@
 Outline:
 Project to guess a number randomly generated between 1 and 100
 
-I would like eventually have a program which will solve the number using numerous methods, and compare the iterations required for each method.
+Currently tries first by guessing completely at random, and then by using a split method to halve the search area.
 
-Current methods planned are randomly guessing numbers between 1 and 100, and a divisor method which guesses the median number between two known bounds (top and bottom, respectively).
+I would like to add a function following each method's completing stating which was more efficient (least amount of tries) and how many attempts fewer it used.
