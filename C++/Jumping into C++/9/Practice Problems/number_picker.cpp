@@ -11,7 +11,7 @@ int guess;
 
 //Prototype function
 int randRange(int low, int high);
-int check_guess(int guess);
+void check_guess(int guess);
 
 int main()
 {
@@ -28,17 +28,17 @@ int randRange(int low, int high)
 	return rand() % (high-low) + low;
 }
 
-int check_guess(int guess)
+void check_guess(int guess)
 {
 	if(guess == secret_number)
 		{
 			cout << "Correct! The secret number is " << secret_number << "!\n";
 		}
-	else if(guess <= secret_number)
+	else if(guess >= secret_number)
 		{
 			cout << "Wrong! Your guess is too high!\n";
 		}
-	else if(guess >= secret_number)
+	else if(guess <= secret_number)
 		{
 			cout << "Wrong! Your guess is too low!\n";
 		}
