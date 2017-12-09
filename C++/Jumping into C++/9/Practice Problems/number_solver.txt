@@ -1,0 +1,6 @@
+Outline:
+Project to guess a number randomly generated between 1 and 100
+
+I would like eventually have a program which will solve the number using numerous methods, and compare the iterations required for each method.
+
+Current methods planned are randomly guessing numbers between 1 and 100, and a divisor method which guesses the median number between two known bounds (top and bottom, respectively).
