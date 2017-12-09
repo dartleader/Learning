@@ -7,7 +7,9 @@ using namespace std;
 
 //Declare variables
 int secret_number;
-int guess = 50;					//Set initial guess to 50 in order to split the numbers evenly.
+int top_guess = 100;				//Set top bound for guesses.
+int bottom_guess = 0;				//Set bottom bound for guesses.
+int guess = 50;					//Actual guess submitted to program.
 int tries = 0;					//Keeps track of how many tries the program takes.
 bool correct_guess = false;			//Turns true upon guessing correctly.
 
@@ -28,7 +30,7 @@ int main()
 			tries++;
 			get_guess();
 		}
-	cout << "Took " << tries << " to guess the correct number of " << guess << "\n";	//Displays final try count before exiting.
+	cout << "Took " << tries << " tries to guess the correct number of " << guess << "\n";	//Displays final try count before exiting.
 }
 
 int randRange(int low, int high)
@@ -47,12 +49,14 @@ int check_guess(int guess)
 	else if(guess >= secret_number)
 		{
 			cout << "You guessed " << guess << "! Your guess is too high!\n";
-			set_guess(guess/2);	//Halve the guess
+			set_guess(top_guess+bottom_guess/2);
+			top_guess=guess-1;
 		}
 	else if(guess <= secret_number)
 		{
 			cout << "You guessed " << guess << "! Your guess is too low!\n";
-			set_guess(guess*2);	//Double the guess
+			set_guess(top_guess+bottom_guess/2);
+			bottom_guess=guess+1;
 		}
 	cout << secret_number << '\n';
 }
