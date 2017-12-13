@@ -9,6 +9,7 @@ using namespace std;
 int valuelist [ 50 ];
 int highestvalue;
 int lowestvalue;
+int averagevalue;
 
 //Prototype functions
 int assignValues(int num);
@@ -16,21 +17,23 @@ int randRange(int low,int high);
 void printvalues(int num);
 int getHighest(int array[]);
 int getLowest(int array[]);
+int getAverage(int array[]);
 
 int main()
 {
 	srand(time(NULL));		//Roll our random seed
 	assignValues(50);		//Assign 50 values to the array
-	printvalues(50);		//Print our values out
 
 	//Functions to do work on the array go here
 	highestvalue=getHighest(valuelist);
 	lowestvalue=getLowest(valuelist);
-
+	averagevalue=getAverage(valuelist);
 
 	//Print values we have calculated
-	cout << "Highest value : " << highestvalue << "\n";
-	cout << "Lowest value : " << lowestvalue << "\n";
+	cout << "Highest value : " << highestvalue << "\n";	//Highest value
+	cout << "Lowest value : " << lowestvalue << "\n";	//Lowest value
+	cout << "Average value : " << averagevalue << "\n";	//Average value
+	printvalues(50);					//Print our values out
 }
 
 int assignValues(int num)
@@ -80,4 +83,16 @@ int getLowest(int array[])
 		}
 	}
 	return lowest;
+}
+
+int getAverage(int array[])
+{
+	int average;			//Initialize average variable
+	//Add each variable and then divide the sum to compute average
+	for (int i=0;i<50;i++)
+	{
+		average+=array[i];		//Add the array element to the sum
+	}
+	average = average/50;			//Divide the average sum by the number of elements in the array to compute final value
+	return average;
 }
