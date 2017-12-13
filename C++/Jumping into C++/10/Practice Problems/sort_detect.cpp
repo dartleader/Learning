@@ -6,9 +6,9 @@
 using namespace std;
 
 //Declare variables
-int sortedArray[10];			//A sorted array
-int unsortedArray[10];			//An unsorted array
-int randomArray[10];			//Array which will be filled with random integers
+int sortedArray[10];			//Declare an array to be filled with sorted data.
+int unsortedArray[10];			//Declare an array to be filled with unsorted data.
+int randomArray[10];			//Declare an array which will be filled with random integers
 
 //Prototype functions
 int randRange(int low,int high);		//Function to generate pseudo-random numbers within a set range confined between a low and high bound
@@ -17,9 +17,15 @@ bool sort_detect(int array[]);			//Function which will determine if an array is 
 int main()
 {
 	srand(time(NULL));	//Seed our randomizer
+
+	//Generate our arrays
+
+
+
 	//Check if our arrays are sorted
 	sort_detect(sortedArray);
 	sort_detect(unsortedArray);
+	sort_detect(randomArray);
 }
 
 int randRange(int low,int high)
