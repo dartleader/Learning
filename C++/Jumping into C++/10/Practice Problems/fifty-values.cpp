@@ -11,18 +11,20 @@ int highestvalue;
 int lowestvalue;
 
 //Prototype functions
-int getValues(int num);
+int assignValues(int num);
 int randRange(int low,int high);
 void printvalues(int num);
 
 int main()
 {
 	srand(time(NULL));		//Roll our random seed
-	getValues(50);			//Assign 50 values to the array
+	assignValues(50);		//Assign 50 values to the array
 	printvalues(50);		//Print our values out
+
+	//Functions to do work on the array go here
 }
 
-int getValues(int num)
+int assignValues(int num)
 {
 	for (int i=0;i<num;i++)
 	{
@@ -37,14 +39,8 @@ int randRange(int low, int high)
 
 void printvalues(int num)
 {
-	cout << "{";
 	for(int i=0;i<num;i++)
 	{
-		if(i!=0)
-			{
-			cout << ",";
-			}
-		cout << valuelist[i];
+		cout << valuelist[i] << "\n";
 	}
-	cout << "}\n";
 }
