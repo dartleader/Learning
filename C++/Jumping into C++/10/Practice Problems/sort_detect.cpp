@@ -15,6 +15,7 @@ int createRandomArray(int num[]);
 int randRange(int low,int high);		//Function to generate pseudo-random numbers within a set range confined between a low and high bound
 bool sort_detect(int array[]);			//Function which will determine if an array is sorted or not, returning True if sorted, and False otherwise
 int printArray(int array[]);
+int sortArray(int array[]);
 
 int main()
 {
@@ -52,29 +53,21 @@ int randRange(int low,int high)
 
 bool sort_detect(int array[])
 {
-	int temp = array[0];		//Initialize temp variable as first array element
-	for (int i=0;i<10;i++)
+	//Temporary variables to check if arrays are sorted
+	bool sorted=true;
+	int temp=array[0];
+	int i=0;
+	while(sorted==true && i < 10)
 	{
-		//Check if current array element is larger than the previous one
-		if(array[i]<temp){	//If it is not larger than the previous array element, return false
+		if(array[i]<temp)		//If it is smaller than the previous array element, it is not in the correct position to be considered sorted
+		{	
+			sorted=false;
 			cout << "This array is not sorted, " << array[i] << " is smaller than " << temp << "!\n";
-			return false;
 		}
-		else			//If it is larger, return true
-		{
-			cout << "This array is sorted!\n";
-			return true;
-		}
-	}		
-}
-
-/*int createRandomArray(int array[])
-{
-	for(int i;i<10;i++)
-	{
-		array[i]=randRange(1,1000);
+		i++;
+		cout << i << '\n';
 	}
-}*/
+}
 
 int printArray(int array[])
 {
@@ -88,4 +81,9 @@ int printArray(int array[])
 	cout << array[i];
 	}
 	cout << "]\n";
+}
+
+int sortArray(int array[])
+{
+	cout << "Debug test print.\n";
 }
