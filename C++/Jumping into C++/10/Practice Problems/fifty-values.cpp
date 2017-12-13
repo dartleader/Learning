@@ -14,6 +14,7 @@ int lowestvalue;
 int assignValues(int num);
 int randRange(int low,int high);
 void printvalues(int num);
+int getHighest(int array[]);
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 	printvalues(50);		//Print our values out
 
 	//Functions to do work on the array go here
+	getHighest(valuelist);
 }
 
 int assignValues(int num)
@@ -43,4 +45,9 @@ void printvalues(int num)
 	{
 		cout << valuelist[i] << "\n";
 	}
+}
+
+int getHighest(int array[])
+{
+	cout << "Called getHighest()\n";
 }
