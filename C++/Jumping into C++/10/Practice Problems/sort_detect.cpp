@@ -108,7 +108,9 @@ int printArray(int array[])
 //Function still needs to be written to sort our arrays
 /*int sortArray(int array[],size)
 {
-	for(int i=0;i<size;i++)
+	int j = 0;
+	for (int i=0;i<size;i++)
 	{
-		if(}
-}*/
+		if(array[i]<array[j])
+		{
+		*/
