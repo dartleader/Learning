@@ -71,7 +71,7 @@ bool sort_detect(int array[])
 			{	
 //Restart here next time - while/for loops work for the sorted array but detect backwards!? (ie: lesser than, when in fact greater than)
 				sorted=false;
-				cout << ": this element is not sorted, " << array[i] << " is smaller than " << array[j] << "!\n";
+				cout << ": this element is not sorted, " << array[j] << " is smaller than " << array[i] << "!\n";
 			}
 		}
 		if(sorted==true)
