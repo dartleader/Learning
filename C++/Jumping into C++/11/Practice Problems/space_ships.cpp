@@ -3,56 +3,35 @@
 
 using namespace std;
 
-//Structure for the spaceships
+//Declare structures
 struct SpaceShip
 {
+	int number;
 	int x_position;
 	int y_position;
-	string name;
 };
 
-//Initialize variables
-int ship_count = 2;	//How many ships do we want in total?
-SpaceShip ship_1;	//Array to hold the spaceships
-SpaceShip temp;
-
 //Prototype functions
-SpaceShip getSpaceShip();
-//void printSpaceShip(SpaceShip ship);
+SpaceShip newSpaceShip;
 
-//SpaceShip getSpaceShip(int ship);
+//Initialize variables
+int ship_count=0;
+SpaceShip ships[5];
 
 int main()
 {
-	//cout << "How many ships would you like to generate?\n";
-	//cin >> ship_count;
-	
-	//Create spaceship
-	SpaceShip ship_1;
-	ship_1.name = "Tyko";
-	ship_1.x_position=5;
-	ship_1.y_position=7;
-	/*for(int i=0;i<ship_count;i++)
+	cout << "How many spaceships would you like to generate?\n";
+	cin >> ship_count;
+	cout << "Generating " << ship_count << " ships.\n";
+
+	for(int i=0;i<ship_count;i++)
 	{
-		cout << "Generating spaceship!\n";
-		SpaceShip temp = getSpaceShip();
-	}*/
-	cout << "Name : " << ship_1.name << "\n";
-	cout << "X position : " << ship_1.x_position << "\n";
-	cout << "Y position : " << ship_1.y_position << "\n";
-	//printSpaceShip(ship_1);
-}
+		ships[i].number = i;
+		ships[i].x_position = i*3;
+		ships[i].y_position = i*4;
 
-/*printSpaceShip(ship){
-	cout << ship.name;
-	cout << ship.x_position;
-	cout << ship.y_position;
-}*/
-
-SpaceShip getSpaceShip()
-{
-	SpaceShip temp;
-	temp.x_position;
-	temp.y_position;
-	return temp;
+		cout << "Ship number " << ships[i].number << " is at (";
+		cout << ships[i].x_position << ",";
+		cout << ships[i].y_position << ").\n";
+	}
 }
