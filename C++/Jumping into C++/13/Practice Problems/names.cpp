@@ -7,10 +7,21 @@ using namespace std;
 string first_name;
 string last_name;
 
+//Prototype functions
+void printNames();
+
 int main()
 {
 	cout << "What is your first name?\n";	
 	cin >> first_name;
 	cout << "What is your last name?\n";	
 	cin >> last_name;
+
+	printNames();
+}
+
+void printNames()
+{
+	cout << "First name: " << first_name << ", ";
+	cout << "last name: " << last_name << "\n";
 }
