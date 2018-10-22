@@ -6,3 +6,5 @@ Contains exercises from:
 Jumping into C++, Alex Allain.
 
 How to think like a Computer Scientist, Learning with Python 3.
+
+Learn C the Hard Way, Zed Shaw.
